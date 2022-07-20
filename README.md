@@ -6,3 +6,4 @@ En un lenguaje compilado, la máquina de destino traduce directamente el program
 
 
 ¿Java está compilado o interpretado, o ambos?
+Sí, un programa Java primero se compila en un código de bytes que JRE puede entender. ByteCode luego es interpretado por la JVM convirtiéndolo en un lenguaje interpretado.
