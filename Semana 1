@@ -32,3 +32,21 @@ EL nivel indica la cantidad de abstracción entre el lenguaje de programación y
 
 ###MIERCOLES
 
+1. ¿Tu fecha de nacimiento en la matriz? ejercicio
+Adjunto respuesta
+11 de Diciembre de 1994
+11 = 8, 2, 1
+     1 1 1
+12 = 8 4 
+     1 0
+1994= 1024, 512, 256, 128, 64, 8, 2
+
+       1 1 1 1 1 1 1
+
+Respuesta formato 11/12/1994:
+111/10/111111
+
+
+
+
+
