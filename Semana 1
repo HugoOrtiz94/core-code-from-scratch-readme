@@ -66,3 +66,11 @@ Respuesta formato 11/12/1994:
 
 #2. ejercicio MIPS
 
+Ejemplo:
+.data
+        message: .asciiz "\nHello, World!\n"
+  .text
+        main:
+              li $v0, 4
+              la $a0, message
+              syscall
