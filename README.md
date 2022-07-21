@@ -21,3 +21,7 @@ Pasos.
 4. Realizar convercion ($cantidad dolares * Valor bitcoin)
 5. resultado
 6. fin
+
+High and Low level languages
+
+
