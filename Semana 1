@@ -1,4 +1,7 @@
 
+
+##MARTES
+
 Interpreted And Compiled Programming Languages
 
 En un lenguaje compilado, la máquina de destino traduce directamente el programa. En un idioma interpretado, el código fuente no es traducido directamente por la máquina de destino. En cambio, un programa diferente , también conocido como el intérprete, lee y ejecuta el código.
@@ -25,3 +28,7 @@ High and Low level languages
 
 
 EL nivel indica la cantidad de abstracción entre el lenguaje de programación y el lenguaje de maquina que es un conjunto de instrucciones ejecutadas directamente desde la CPU y es el unico lenguaje que una computadora es capaz de entender
+
+
+###MIERCOLES
+
