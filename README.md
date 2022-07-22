@@ -3,6 +3,6 @@
 Hugo Ortiz
 
 
-[Semana 1](Semana 1.README.md)
+[Semana 1](ejercicios_ejemplos.md)
 
 
