@@ -115,7 +115,25 @@ Crea un programa que muestre tu nombre
               la $a0, message
               syscall
 #JUEVES
-
+1. Print special numbers exercise
 ```for (var i = 0; i <= 100; i++) {
   if (i % 2 == 0) console.log(i);
 }
+```
+var i = 0;
+while (i <= 100) {
+  if (i % 2 == 0) console.log(i);
+  i++;
+}
+```var i = 0;
+while (i <= 100) {
+  if (i % 2 == 0) console.log(i);
+  i++;
+}
+
+2. Bad Code exercise
+
+
+
+
+3. 
