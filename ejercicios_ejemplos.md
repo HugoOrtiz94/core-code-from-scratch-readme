@@ -119,8 +119,7 @@ Crea un programa que muestre tu nombre
 ```for (var i = 0; i <= 100; i++) {
   if (i % 2 == 0) console.log(i);
 }
-```
-var i = 0;
+```var i = 0;
 while (i <= 100) {
   if (i % 2 == 0) console.log(i);
   i++;
@@ -132,8 +131,58 @@ while (i <= 100) {
 }
 
 2. Bad Code exercise
+El código que se muestra a continuación no está funcionando de la manera correcta, como tarea debes encontrar el error que cometió el desarrollador que programó este código y corregirlo, para este ejercicio debes explicar cuál es el error y colocar el código correcto
+
+```var cond = false;
+
+if ((cond = true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+
+Solucion
+
+```var cond = false;
+
+if (cond) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
 
 
 
 
-3. 
+
+3. mal código 2
+
+var n = 100;
+
+if (n == 100) {
+  console.log('This is a special number!');
+}
+if (n < 1000) {
+  console.log('');
+} else {
+  console.log('Just a regular number');
+}
+if (n % 10 == 0) {
+  console.log('This number is multiple of 10');
+}
+
+Solución
+
+var n = 100;
+
+if (n == 100) {
+  console.log('This is a special number!');
+} else if (n < 1000 && n % 10 == 0) {
+  console.log('This number is almost special');
+} else {
+  console.log('Just a regular number');
+}
+
+
+
+
