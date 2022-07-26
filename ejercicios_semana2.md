@@ -4,7 +4,7 @@ The if statement executes a statement if a specified condition is truthy. If the
 
 Try it
 <picture>
-```
+```ruby
 function testNum(a) {
   let result;
   if (a > 0) {
