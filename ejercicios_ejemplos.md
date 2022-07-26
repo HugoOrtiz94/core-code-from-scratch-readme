@@ -130,9 +130,49 @@ while (i <= 100) {
   i++;
 }
 
+<<<<<<< HEAD
+Ejercicio de imprimir números especiales
+=======
 2. Bad Code exercise
 El código que se muestra a continuación no está funcionando de la manera correcta, como tarea debes encontrar el error que cometió el desarrollador que programó este código y corregirlo, para este ejercicio debes explicar cuál es el error y colocar el código correcto
+>>>>>>> 18e9f4078e1806fdbbf11c07861c1fe162516dbb
 
+<<<<<<< HEAD
+
+let str = '';
+
+for (let i = 0; i < 100; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// expected output: "012345678"
+
+
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// expected output: 3
+
+console.log(13 % 5);
+// expected output: 3
+
+console.log(-13 % 5);
+// expected output: -3
+
+console.log(4 % 2);
+// expected output: 0
+
+console.log(-4 % 2);
+// expected output: -0
+
+
+
+=======
 ```var cond = false;
 
 if ((cond = true)) {
@@ -182,7 +222,4 @@ if (n == 100) {
 } else {
   console.log('Just a regular number');
 }
-
-
-
-
+...
