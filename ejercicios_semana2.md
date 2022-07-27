@@ -87,3 +87,14 @@ num = '4 ';
 num2 = '7 ';
 console.log(num * num2);
 ```
+
+ "Cómo convertir caracteres en javascript de número ascii"
+ 
+ function uniTotal(str) {
+  let total = 0;
+  for (let i = 0, length = str.length; i < length; i++) {
+    total += str[i].charCodeAt();
+  }
+  return total;
+}
+
