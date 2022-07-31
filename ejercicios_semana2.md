@@ -98,3 +98,42 @@ console.log(num * num2);
   return total;
 }
 
+
+
+Miercoles
+
+```Ruby
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = 'positive';
+  } else {
+    result = 'NOT positive';
+  }
+  return result;
+}
+
+console.log(testNum(-5));
+// expected output: "NOT positive"
+```
+
+Multiple if...else statements can be nested to create an else if clause. Note that there is no elseif (in one word) keyword in JavaScript.
+
+
+In general, it is a good practice to always use block statements, especially in code involving nested if statements.
+```Ruby
+function checkValue(a, b) {
+  if (a === 1) {
+    if (b === 2) {
+      console.log("a is 1 and b is 2");
+    } else {
+      console.log("a is not 1");
+    }
+  }
+}
+
+console.log(checkValue(-5));
+```
+
+
+
