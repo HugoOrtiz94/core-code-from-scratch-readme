@@ -26,5 +26,65 @@ function likes(names) {
 }
 ```
 
+Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
 
+Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
+```ruby
+var countBits = function (n) {
+  let binaryNumber = n.toString(2);
+  let oneBitCount = 0;
+  for (let i = 0; i < binaryNumber.length; i++) {
+    if (binaryNumber[i] === '1') oneBitCount++;
+  }
+  return oneBitCount;
+};
+```
+
+Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+```ruby
+function getWordNumber(word) {
+  for (let i = 0; i < word.length; i++) {
+    if (!Number.isNaN(Number(word[i]))) return word[i];
+  }
+}
+
+function cleanUndefined(array) {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] != undefined) result.push(array[i]);
+  }
+  return result;
+}
+
+function order(words) {
+  let sortedArray = [];
+  let wordsArray = words.split(' ');
+  for (let i = 0; i < wordsArray.length; i++) {
+    let wordNumber = getWordNumber(wordsArray[i]);
+    sortedArray[wordNumber] = wordsArray[i];
+  }
+  return cleanUndefined(sortedArray).join(' ');
+}
+```
+
+MARTES
+Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+```ruby
+function pigIt(str){
+  //Code here
+  let pMarks = ['!', '¡', '?', '¿', '.', ',', ':', ';'];
+  str = str.split(' ');
+  for (let i = 0; i < str.length; i++) {
+    if (pMarks.indexOf(str[i]) >= 0) continue;
+    str[i] = str[i].slice(1) + str[i].slice(0, 1) + 'ay';
+  }
+  return str.join(' ');
+}
+```
