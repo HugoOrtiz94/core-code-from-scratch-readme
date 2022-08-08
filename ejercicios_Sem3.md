@@ -339,18 +339,18 @@ var encryptThis = function (text) {
 **Let’s write our Mission Statement!** In **one paragraph**, please answer to the next 5 questions:
 
 1. Who are you?
-Soy Hugo Leonel Ortiz del municipio de San Jose Poaquil Chimaltenango con muchas ganas de aprender a desarrollar, por el momento trabajo en soporte IT tengo muchas ganas de seguir ampliando mis conociemientos y en este area especificamente me e interesado demasiado aunque me cueste comprender varios temas pero espero con la practica poder aprender muchisimo y empezar a trabajar en esta rama del desarrollo.
+Soy Hugo Leonel Ortiz del municipio de San José Poaquil Chimaltenango con muchas ganas de aprender a desarrollar, por el momento trabajo en soporte IT tengo muchas ganas de seguir ampliando mis conocimientos y en este área específicamente me e interesado demasiado aunque me cueste comprender varios temas pero espero con la práctica poder aprender muchísimo y empezar a trabajar en esta rama del desarrollo.
 
 2. What background do you have?
-Soy estudiante universitario de la carrera de ingenieria en sistemas que abarca la tecnología y algunas ramas de la programación de donde tambien nace la idea del desarrollo porque tambien enseñan algunos elementos basicos de este tema. Inicie este año en febrero 2022 en support TI donde tambien en ocasiones e realizado QA de algunas aplicaciones que desarrollan en la empresa, por eso mismo quiero aprender a desarrollar.
+Soy estudiante universitario de la carrera de ingeniería en sistemas que abarca la tecnología y algunas ramas de la programación de donde también nace la idea del desarrollo porque también enseñan algunos elementos básicos de este tema. Inicie este año en febrero 2022 en support TI donde también en ocasiones e realizado QA de algunas aplicaciones que desarrollan en la empresa, por eso mismo quiero aprender a desarrollar.
 
 
 3. Who do you want to be?
-Ser una persona que pueda aportar en gran manera en mi comunidad en  mi pueblo y mi país con el desarrollo de aplicaciones que beneficien en gran manera a personas que lo necesiten y en las empresas donde trabaje presentar la solución a los problemas o desafios que se presenten para marcar un cambio en mi historia.
+Ser una persona que pueda aportar en gran manera en mi comunidad en mi pueblo y mi país con el desarrollo de aplicaciones que beneficien en gran manera a personas que lo necesiten y en las empresas donde trabaje presentar la solución a los problemas o desafíos que se presenten para marcar un cambio en mi historia.
 
 4. What do you want to do?
-Quiero darle solución a muchas necesidades que se presentan en pequeñas o grandes empresas, para llevar un mejor control en sus inventarios o procesos que realicen asi poder hacer crecer con orden en lo que realicen, tambien en el aréa donde me den la oportunidad o donde yo vea que se necesie estar ahi para mejar los sistemas para el mejor control. 
+Quiero darle solución a muchas necesidades que se presentan en pequeñas o grandes empresas, para llevar un mejor control en sus inventarios o procesos que realicen así poder hacer crecer con orden en lo que realicen, también en el área donde me den la oportunidad o donde yo vea que se necesite estar ahí para mejorar los sistemas para el mejor control. 
 
 
 5. What are the core values and principles that govern your character and contributions?
-Los valores qeu rigen mi caracter son la responsabilidad, el compromiso y el orden, en estos valores me considero estar bien porque me gusta ser responsable en lo que realizo, tener compromiso con lo que me encomienden, y ser ordenado en todo sentido desde la limpieza fisica y con lo que se me solicite.
+Los valores que rigen mi carácter son la responsabilidad, el compromiso y el orden, en estos valores me considero estar bien porque me gusta ser responsable en lo que realizo, tener compromiso con lo que me encomienden, y ser ordenado en todo sentido desde la limpieza física y con lo que se me solicite.
