@@ -105,3 +105,24 @@ const mStr = "Hey, I'm 25 and she's 31!";
 }));
 
 ```
+
+
+underscore
+Length should be between 4 and 16 characters (both included).
+
+
+function validateUsr(username) {
+  res =  /^[a-z0-9_]{4,16}$/.test(username) 
+  return res
+}
+
+Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
+
+Function:
+
+getNumberFromString(s)
+
+function getNumberFromString(s) {
+  return Number(s.match(/\d/g).join(''));
+}
+
