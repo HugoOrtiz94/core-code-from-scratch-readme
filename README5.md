@@ -11,7 +11,7 @@ console.log(addNumbers(3, 6));
 
 Otras características de código de TypeScript
 TypeScript tiene funciones de codificación adicionales que no encontrará en JavaScript:
-*
+
 *Interfaces
 *Espacios de nombres
 *Genéricos
@@ -22,7 +22,7 @@ TypeScript tiene funciones de codificación adicionales que no encontrará en Ja
 *Decoradores
 *Escriba útiles
 *palabra clave de solo lectura
-*
+
 
 *Typescript Introduction
 *Create Folder
