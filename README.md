@@ -15,3 +15,5 @@ Hugo Ortiz
 [Semana 4](EjerSem4.md)
 
 [Semana 5](README5.md)
+
+[Semana 6](sem6.md)
