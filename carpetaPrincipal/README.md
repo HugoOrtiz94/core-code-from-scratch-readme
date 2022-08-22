@@ -16,4 +16,4 @@ Hugo Ortiz
 
 [Semana 5](README5.md)
 
-[Semana 6](carpetaprincipal/sem6.md)
+[Semana 6](sem6.md)
