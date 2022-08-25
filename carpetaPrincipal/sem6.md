@@ -1,9 +1,9 @@
  #Typescript
 
 ** Introduction to Object Oriented Programming
-**Abstraction
-**Inheritance
-**Polymorphism
+* $Abstraction
+$Inheritance
+$Polymorphism
 **Encapsulation
 **Concept of class
 **Attributes
