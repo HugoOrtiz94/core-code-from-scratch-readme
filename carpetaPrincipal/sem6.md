@@ -637,3 +637,371 @@ console.log('Admins of age 23:');
 adminsOfAge23.forEach(logPerson);
  
 ```
+ 
+Intro:
+
+    Filtering was completely removed from the project.
+    It turned out that this feature was just not needed
+    for the end-user and we spent a lot of time just because
+    our office manager told us to do so. Next time we should
+    instead listen to the product management.
+
+    Anyway we have a new plan. CEO's friend Nick told us
+    that if we randomly swap user names from time to time
+    in the community, it would be very funny and the project
+    would definitely succeed!
+
+Exercise:
+
+    Implement swap which receives 2 persons and returns them in
+    the reverse order. The function itself is already
+    there, actually. We just need to provide it with proper types.
+    Also this function shouldn't necessarily be limited to just
+    Person types, lets type it so that it works with any two types
+    specified. 
+
+```
+interface User {
+    type: 'user';
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    type: 'admin';
+    name: string;
+    age: number;
+    role: string;
+}
+
+function logUser(user: User) {
+    const pos = users.indexOf(user) + 1;
+    console.log(` - #${pos} User: ${user.name}, ${user.age}, ${user.occupation}`);
+}
+
+function logAdmin(admin: Admin) {
+    const pos = admins.indexOf(admin) + 1;
+    console.log(` - #${pos} Admin: ${admin.name}, ${admin.age}, ${admin.role}`);
+}
+
+const admins: Admin[] = [
+    {
+        type: 'admin',
+        name: 'Will Bruces',
+        age: 30,
+        role: 'Overseer'
+    },
+    {
+        type: 'admin',
+        name: 'Steve',
+        age: 40,
+        role: 'Steve'
+    }
+];
+
+const users: User[] = [
+    {
+        type: 'user',
+        name: 'Moses',
+        age: 70,
+        occupation: 'Desert guide'
+    },
+    {
+        type: 'user',
+        name: 'Superman',
+        age: 28,
+        occupation: 'Ordinary person'
+    }
+];
+
+export function swap<T1, T2>(v1:T1, v2:T2): [T2, T1] {
+    return [v2, v1];
+}
+
+function test1() {
+    console.log('test1:');
+    const [secondUser, firstAdmin] = swap(admins[0], users[1]);
+    logUser(secondUser);
+    logAdmin(firstAdmin);
+}
+
+function test2() {
+    console.log('test2:');
+    const [secondAdmin, firstUser] = swap(users[0], admins[1]);
+    logAdmin(secondAdmin);
+    logUser(firstUser);
+}
+
+function test3() {
+    console.log('test3:');
+    const [secondUser, firstUser] = swap(users[0], users[1]);
+    logUser(secondUser);
+    logUser(firstUser);
+}
+
+function test4() {
+    console.log('test4:');
+    const [firstAdmin, secondAdmin] = swap(admins[1], admins[0]);
+    logAdmin(firstAdmin);
+    logAdmin(secondAdmin);
+}
+
+function test5() {
+    console.log('test5:');
+    const [stringValue, numericValue] = swap(123, 'Hello World');
+    console.log(` - String: ${stringValue}`);
+    console.log(` - Numeric: ${numericValue}`);
+}
+
+[test1, test2, test3, test4, test5].forEach((test) => test()); 
+```
+/*
+
+Intro:
+
+    Project grew and we ended up in a situation with
+    some users starting to have more influence.
+    Therefore, we decided to create a new person type
+    called PowerUser which is supposed to combine
+    everything User and Admin have.
+
+Exercise:
+
+    Define type PowerUser which should have all fields
+    from both User and Admin (except for type),
+    and also have type 'powerUser' without duplicating
+    all the fields in the code.
+
+*/
+ 
+ ```
+ interface User {
+    type: 'user';
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    type: 'admin';
+    name: string;
+    age: number;
+    role: string;
+}
+
+type PowerUser = Omit<User, 'type'> & Omit<Admin, 'type'> & {type: "powerUser"};
+
+export type Person = User | Admin | PowerUser;
+
+export const persons: Person[] = [
+    { type: 'user', name: 'Max Mustermann', age: 25, occupation: 'Chimney sweep' },
+    { type: 'admin', name: 'Jane Doe', age: 32, role: 'Administrator' },
+    { type: 'user', name: 'Kate Müller', age: 23, occupation: 'Astronaut' },
+    { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' },
+    {
+        type: 'powerUser',
+        name: 'Nikki Stone',
+        age: 45,
+        role: 'Moderator',
+        occupation: 'Cat groomer'
+    }
+];
+
+function isAdmin(person: Person): person is Admin {
+    return person.type === 'admin';
+}
+
+function isUser(person: Person): person is User {
+    return person.type === 'user';
+}
+
+function isPowerUser(person: Person): person is PowerUser {
+    return person.type === 'powerUser';
+}
+
+export function logPerson(person: Person) {
+    let additionalInformation: string = '';
+    if (isAdmin(person)) {
+        additionalInformation = person.role;
+    }
+    if (isUser(person)) {
+        additionalInformation = person.occupation;
+    }
+    if (isPowerUser(person)) {
+        additionalInformation = `${person.role}, ${person.occupation}`;
+    }
+    console.log(`${person.name}, ${person.age}, ${additionalInformation}`);
+}
+
+console.log('Admins:');
+persons.filter(isAdmin).forEach(logPerson);
+
+console.log();
+
+console.log('Users:');
+persons.filter(isUser).forEach(logPerson);
+
+console.log();
+
+console.log('Power users:');
+persons.filter(isPowerUser).forEach(logPerson);
+
+// In case if you are stuck:
+// https://www.typescriptlang.org/docs/handbook/utility-types.html
+```
+ 
+
+    PowerUsers idea was bad. Once those users got
+    extended permissions, they started bullying others
+    and we lost a lot of great users.
+    As a response we spent all the remaining money
+    on the marketing and got even more users.
+    We need to start preparing to move everything to a
+    real database. For now we just do some mocks.
+
+    The server API format was decided to be the following:
+
+    In case of success: { status: 'success', data: RESPONSE_DATA }
+    In case of error: { status: 'error', error: ERROR_MESSAGE }
+
+    The API engineer started creating types for this API and
+    quickly figured out that the amount of types needed to be
+    created is too big.
+
+Exercise:
+
+    Remove UsersApiResponse and AdminsApiResponse types
+    and use generic type ApiResponse in order to specify API
+    response formats for each of the functions.
+ 
+ ```
+ 
+interface User {
+    type: 'user';
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    type: 'admin';
+    name: string;
+    age: number;
+    role: string;
+}
+
+type Person = User | Admin;
+
+const admins: Admin[] = [
+    { type: 'admin', name: 'Jane Doe', age: 32, role: 'Administrator' },
+    { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' }
+];
+
+const users: User[] = [
+    { type: 'user', name: 'Max Mustermann', age: 25, occupation: 'Chimney sweep' },
+    { type: 'user', name: 'Kate Müller', age: 23, occupation: 'Astronaut' }
+];
+
+export type ApiResponse<T> =  {
+        status: 'success';
+        data: T;
+    } |
+    {
+        status: 'error';
+        error: string;
+    };
+
+export function requestAdmins(callback: (response: ApiResponse<Admin[]>) => void) {
+    callback({
+        status: 'success',
+        data: admins
+    });
+}
+
+export function requestUsers(callback: (response: ApiResponse<User[]>) => void) {
+    callback({
+        status: 'success',
+        data: users
+    });
+}
+
+export function requestCurrentServerTime(callback: (response: ApiResponse<number>) => void) {
+    callback({
+        status: 'success',
+        data: Date.now()
+    });
+}
+
+export function requestCoffeeMachineQueueLength(callback: (response: ApiResponse<number>) => void) {
+    callback({
+        status: 'error',
+        error: 'Numeric value has exceeded Number.MAX_SAFE_INTEGER.'
+    });
+}
+
+function logPerson(person: Person) {
+    console.log(
+        ` - ${person.name}, ${person.age}, ${person.type === 'admin' ? person.role : person.occupation}`
+    );
+}
+
+
+function startTheApp(callback: (error: Error | null) => void) {
+    requestAdmins((adminsResponse) => {
+        console.log('Admins:');
+        if (adminsResponse.status === 'success') {
+            adminsResponse.data.forEach(logPerson);
+        } else {
+            return callback(new Error(adminsResponse.error));
+        }
+
+        console.log();
+
+        requestUsers((usersResponse) => {
+            console.log('Users:');
+            if (usersResponse.status === 'success') {
+                usersResponse.data.forEach(logPerson);
+            } else {
+                return callback(new Error(usersResponse.error));
+            }
+
+            console.log();
+
+            requestCurrentServerTime((serverTimeResponse) => {
+                console.log('Server time:');
+                if (serverTimeResponse.status === 'success') {
+                    console.log(`   ${new Date(serverTimeResponse.data).toLocaleString()}`);
+                } else {
+                    return callback(new Error(serverTimeResponse.error));
+                }
+
+                console.log();
+
+                requestCoffeeMachineQueueLength((coffeeMachineQueueLengthResponse) => {
+                    console.log('Coffee machine queue length:');
+                    if (coffeeMachineQueueLengthResponse.status === 'success') {
+                        console.log(`   ${coffeeMachineQueueLengthResponse.data}`);
+                    } else {
+                        return callback(new Error(coffeeMachineQueueLengthResponse.error));
+                    }
+
+                    callback(null);
+                });
+            });
+        });
+    });
+}
+
+startTheApp((e: Error | null) => {
+    console.log();
+    if (e) {
+        console.log(`Error: "${e.message}", but it's fine, sometimes errors are inevitable.`)
+    } else {
+        console.log('Success!');
+    }
+});
+
+// In case if you are stuck:
+// https://www.typescriptlang.org/docs/handbook/2/generics.html
+```
