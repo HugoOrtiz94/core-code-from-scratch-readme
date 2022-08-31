@@ -1005,3 +1005,121 @@ startTheApp((e: Error | null) => {
 // In case if you are stuck:
 // https://www.typescriptlang.org/docs/handbook/2/generics.html
 ```
+
+ 
+###Martes.
+Array.prototype.reduce()
+El reduce()método ejecuta una función de devolución de llamada "reductora" proporcionada por el usuario en cada elemento de la matriz, en orden, pasando el valor de retorno del cálculo en el elemento anterior. El resultado final de ejecutar el reductor en todos los elementos de la matriz es un valor único. 
+```
+ const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial);
+// expected output: 10
+```
+ 
+Parámetros
+callbackFn
+Una función "reductora" llamada con los siguientes argumentos:
+
+previousValue
+El valor resultante de la llamada anterior a callbackFn. En la primera llamada, initialValuesi se especifica, de lo contrario el valor de array[0].
+
+currentValue
+El valor del elemento actual. En la primera llamada, el valor de array[0]si initialValuese especificó an, de lo contrario, el valor de array[1].
+
+currentIndex
+La posición de índice de currentValueen la matriz. En primera convocatoria, 0si initialValuese ha especificado, en caso contrario 1.
+
+array
+La matriz que se está recorriendo.
+
+initialValue Opcional
+Un valor al que previousValuese inicializa la primera vez que se llama a la devolución de llamada. Si initialValuese especifica, eso también hace currentValueque se inicialice en el primer valor de la matriz. Si noinitialValue se especifica, se inicializa en el primer valor de la matriz y se inicializa en el segundo valor de la matriz. previousValuecurrentValue
+ 
+Matemáticas.pow()    Math.pow()
+ 
+El Math.pow()método estático, dados dos argumentos, base y exponente , devuelve baseexponent.
+ 
+``` 
+console.log(Math.pow(7, 3));
+// expected output: 343
+
+console.log(Math.pow(4, 0.5));
+// expected output: 2
+
+console.log(Math.pow(7, -2));
+// expected output: 0.02040816326530612
+//                  (1/49)
+
+console.log(Math.pow(-7, 0.5));
+// expected output: NaN
+``` 
+
+ 
+Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+ 
+```
+export function squareSum(numbers: number[]): number {
+  let sum = 0;
+  numbers.forEach(numbers => {
+    sum += (numbers*numbers)
+  })
+    return sum;
+}
+```
+ 
+#Miercoles 
+ 
+indexOf - MDN
+ 
+El indexOf()método devuelve el primer índice en el que se puede encontrar un elemento dado en la matriz, o -1 si no está presente.
+
+```
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison'));
+// expected output: 1
+
+// start from index 2
+console.log(beasts.indexOf('bison', 2));
+// expected output: 4
+
+console.log(beasts.indexOf('giraffe'));
+// expected output: -1
+```
+Los lobos han sido reintroducidos en Gran Bretaña. Eres un criador de ovejas y ahora estás plagado de lobos que fingen ser ovejas. Afortunadamente, eres bueno para detectarlos.
+
+Advierta a la oveja frente al lobo que está a punto de ser devorada. Recuerda que estás parado al frente de la cola que está al final de la matriz:
+
+[sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)
+   7      6      5      4      3            2      1
+Si el lobo es el animal más cercano a ti, regresa "Pls go away and stop eating my sheep". De lo contrario, regresa "Oi! Sheep number N! You are about to be eaten by a wolf!"donde Nestá la posición de la oveja en la cola.
+
+Nota: siempre habrá exactamente un lobo en la matriz.
+
+Ejemplos
+Entrada: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+Salida:"Oi! Sheep number 1! You are about to be eaten by a wolf!"
+
+Entrada: ["sheep", "sheep", "wolf"]
+Salida:"Pls go away and stop eating my sheep" 
+ 
+```
+ export function warnTheSheep(queue: string[]): string {
+  const wolfPosition = queue.indexOf('wolf');
+  if (wolfPosition == queue.length - 1)
+    return 'Pls go away and stop eating my sheep';
+  return `Oi! Sheep number ${Math.abs(
+    wolfPosition + 1 - queue.length
+  )}! You are about to be eaten by a wolf!`;
+}
+```
