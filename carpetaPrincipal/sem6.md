@@ -1123,3 +1123,17 @@ Salida:"Pls go away and stop eating my sheep"
   )}! You are about to be eaten by a wolf!`;
 }
 ```
+
+ 
+###MIERCOLES 
+Typescript
+TypeScript: TypeScript se puede instalar después de instalar Node.js después de ejecutar lo siguiente en una terminal o ventana de comandos:
+
+```
+npm install -g typescript
+```
+ 
+Ejercicio- Crear una clase
+ 
+Para crear una clase, defina sus miembros: propiedades, a constructor, accesores y métodos.
+ 
