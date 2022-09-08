@@ -259,3 +259,137 @@ export default class Main {
   }
 }
 ```
+
+
+String.prototype.repeat()
+The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.
+
+Try it
+
+```
+
+const chorus = 'Because I\'m happy. ';
+
+console.log(`Chorus lyrics for "Happy": ${chorus.repeat(27)}`);
+```
+
+// expected output: "Chorus lyrics for "Happy": Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. "
+
+String.prototype.split()
+The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+```
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words[3]);
+// expected output: "fox"
+
+const chars = str.split('');
+console.log(chars[8]);
+// expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
+
+Array.prototype.sort()
+The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+
+```
+const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// expected output: Array [1, 100000, 21, 30, 4]
+```
+
+Array.prototype.map()
+The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+```
+const array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+```
+
+Descripción general de las interfaces en TypeScript
+
+```
+interface Employee {
+    firstName: string;
+    lastName: string;
+    fullName(): string;
+}
+```
+```
+let employee: Employee = {
+    firstName : "Emil",
+    lastName: "Andersson",
+    fullName(): string {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+employee.firstName = 10;  //* Error - Type 'number' is not assignable to type 'string'
+```
+
+La Employeeinterfaz anterior también se puede expresar como un alias de tipo utilizando la typepalabra clave:
+
+
+
+```
+type Employee = {
+    firstName: string;
+    lastName: string;
+    fullName(): string;
+}
+```
+
+
+interfaz
+```
+interface IceCream {
+   flavor: string;
+   scoops: number;
+   instructions?: string; 
+}
+interface Sundae extends IceCream {
+    sauce: 'chocolate' | 'caramel' | 'strawberry';
+    nuts?: boolean;
+    whippedCream?: boolean;
+    instructions?: string;
+}
+
+let myIceCream: Sundae = {
+    flavor: 'vanilla',
+    scoops: 2,
+    sauce: 'caramel',
+    nuts: true,
+    instructions: 'frio'
+}
+
+
+console.log(myIceCream.flavor);
+console.log(myIceCream.sauce);
+
+function tooManyScoops(dessert: Sundae) {
+    if (dessert.scoops >= 4) {
+        return dessert.scoops + ' is too many scoops!';
+    } else {
+        return 'Your order will be ready soon!';
+    }
+}
+console.log(tooManyScoops({flavor: 'vanilla', scoops: 5, sauce: 'caramel'}));
+```
+
