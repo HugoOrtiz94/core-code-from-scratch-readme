@@ -19,3 +19,5 @@ Hugo Ortiz
 [Semana 6](sem6.md)
 
 [Semana 7](sem7.md)
+
+[Semana 8](sem8.md)
