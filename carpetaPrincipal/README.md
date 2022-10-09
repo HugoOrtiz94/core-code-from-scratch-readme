@@ -27,3 +27,5 @@ Hugo Ortiz
 [Semana 10](sem10.md)
 
 [Semana 11](Sem11.md)
+
+[Semana 12](Sem12.md)
