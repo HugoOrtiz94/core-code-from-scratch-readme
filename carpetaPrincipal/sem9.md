@@ -22,4 +22,6 @@ edad = 20; // La variable ahora sólo puede asignar valores del tipo number
 [https://www.youtube.com/watch?v=eCZhz0JCVx0]
 
 
+5 razones para usar typescript
+[https://www.youtube.com/watch?v=BDCjP9VLoPo]
 
